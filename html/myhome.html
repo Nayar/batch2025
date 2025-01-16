@@ -1,0 +1,92 @@
+<!DOCTYPE html> <!-- This is to tell the browser that it is an HTML file-->
+<html> 
+    <head><!-- not visible on website: add metadata, includes -->
+        <title>This is my first lesson</title>
+        <link rel="stylesheet" href="mycss.css"/> <!-- include css in another file -->
+        <style> /* write css directly here */
+            body {
+                background-image: url("background.jpg")
+            }
+
+            div p { /* every p inside a div; apply this */
+                background-color: yellow;
+            }
+
+            p {
+}
+
+p {
+  color: blue;
+  display: none;
+}
+
+            
+            h1, h6 { /* h1: means the element which we want to target */
+                color: red; /* we want to change the color to red */
+            }
+
+            h2 { 
+                color: yellow;
+                background-color: aqua;
+                font-size: 20px;
+            }
+
+            #video { /* # means it will look for id="video" */
+                color: red;
+            }
+
+            .formula { /* . means it will look for class="formula"*/
+                background-color: aquamarine;
+            }
+
+            ul > li {
+                color: green;
+            }
+
+        </style>
+    </head>
+    <body><!-- what is visible in the web page-->
+        <h1>This is HTML class 1</h1> <!-- H = Heading -->
+        <h2>It is delivered in Mauritius</h2>
+        <h3>By your favorite tutor</h3>
+        <h6>h6 is the smallest</h6>
+        <p>This is where normal text is written.<hr> And i want it to be really long. <br> I want to end my content here.
+        </p>
+        <p>This text is going to be <b>styled bold</b>. This one <i>italic</i> and this <b><i>one both</i></b>.</p>
+        <p id="einstein" class="formula">  <!-- id is unique in a page -->
+            Einstein says: <br>
+            E = mc<sup>2</sup>
+        </p>
+        <p class="formula">
+            Combusion: <br>
+            CH<sub>4</sub> + 2O<sub>2</sub> = CO<sub>2</sub> + 2H<sub>2</sub>0
+        </p>
+        <h3>These are the hobbies i like to do</h3>
+        <ul> <!-- ol: ordered list / ul: unordered list -->
+            <li>Hikings</li> <!-- list item -->
+            <li>Football</li>
+            <li id="video">Video games</li>
+            <li>Play music
+                <ol>
+                    <li>Guitar 
+                        <ol>
+                            <li>Acoustic</li>
+                            <li>Electric</li>
+                        </ol>
+                    </li>
+                    <li>Piano</li>
+                </ol>
+            </li>
+        </ul>
+        <div>
+            <p>
+                Click here to go to <a href="https://octopus.developers.institute/courses/collection/18/course/9/section/14/chapter/24" target="_self">HTML course</a>
+                The a tag has an href attribute which tells the browser where to go. <br>
+    
+                Click on this link to open the <a href="https://octopus.developers.institute/courses/collection/18/course/9/section/14/chapter/24" target="_blank">HTML course</a>
+                <p>this is another p inside a p<p>
+            </p>
+        </div>
+        <p>Click here to know more <a href="aboutme.html">about me</a></p>
+    </body>
+</html>
