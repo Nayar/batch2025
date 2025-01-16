@@ -1,0 +1,9 @@
+h1 { /* h1: means the element which we want to target */
+    color: red; /* we want to change the color to red */
+}
+
+h2 { 
+    color: yellow;
+    background-color: aqua;
+    font-size: 20px;
+}

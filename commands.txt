@@ -26,3 +26,7 @@ git init    : create a hidden .git folder inside the folder. initialising git
 git status   : tells me what files are in the box. status
 git add <filename> : add to git staging area (delivery box)
 git commit -m "<write a message>"   : closes the box and adds a message
+git log  : shows the history
+git remote origin add <link> : adds a remote to git
+git push origin main : pushes the main branch
+git pull origin main : pulls the main branch
