@@ -14,12 +14,18 @@
                 background-color: gold;
                 border: 2px dotted blue;
                 display: flex;
+                flex-direction: row; /* row (default); row-reverse; column; column-reverse  */
+                justify-content: center; /* works on main axis */
+                align-items: flex-end; /* works on cross axis */
+                height: 1200px;
             }
         </style>
 
     </head>
     <body>
         <h1>Hello Flexbox learners</h1>
+        <h2>flex-direction: row;    Main axis (flex-direction): left-right; cross-axis (align-items): top-bottom</h2>
+        <h2>flex-direction: column; Main axis (flex-direction): top-bottom; cross-axis (align-items): left-right</h2>
         <div id="myflexcontainer">
             <div id="box1" class="box">1</div>
             <div id="box2" class="box">2</div>
