@@ -2,8 +2,30 @@
 <html>
     <head>
         <title>Grid CSS</title>
+        <style>
+            #mygridcontainer {
+                background-color: aqua;
+                display: grid;
+                grid-template-columns: 2fr 1fr; /* how many columns */
+                grid-template-rows: 1fr 1fr 1fr; /* how many rows */
+            }
+
+            .box {
+                background-color: blueviolet;
+                margin: 10px;
+                font-size: 60px;
+            }
+        </style>
     </head>
     <body>
         <h1>Let's learn CSS grid</h1>
+        <div id="mygridcontainer">
+            <div class="box">1</div>
+            <div class="box">2</div>
+            <div class="box">3</div>
+            <div class="box">4</div>
+            <div class="box">5</div>
+            <div class="box">6</div>
+        </div>
     </body>
 </html>
