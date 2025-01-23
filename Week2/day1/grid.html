@@ -6,14 +6,26 @@
             #mygridcontainer {
                 background-color: aqua;
                 display: grid;
-                grid-template-columns: 2fr 1fr; /* how many columns */
-                grid-template-rows: 1fr 1fr 1fr; /* how many rows */
+                grid-template-columns: 200px repeat(2, 2fr) 3fr;; /* how many columns: 4 */
+                grid-template-rows: repeat(5, 1fr); /* how many rows */
+                column-gap: 10px; /* how much gap between columns */
+                row-gap: 20px; /* how much gap between rows */
             }
 
             .box {
                 background-color: blueviolet;
-                margin: 10px;
                 font-size: 60px;
+                border: 2px dotted red;
+            }
+
+            #box3 {
+                grid-column: 2; /* manually assigns column */
+                grid-row: 3;    /* manually assigns rows */
+            }
+
+            #box4 {
+                grid-column: 3 / span 2; /* start on column 3, go up to where column 5 starts */
+                grid-row: 2 / span 3;
             }
         </style>
     </head>
@@ -22,8 +34,8 @@
         <div id="mygridcontainer">
             <div class="box">1</div>
             <div class="box">2</div>
-            <div class="box">3</div>
-            <div class="box">4</div>
+            <div class="box" id="box3">3</div>
+            <div class="box" id="box4">4</div>
             <div class="box">5</div>
             <div class="box">6</div>
         </div>
