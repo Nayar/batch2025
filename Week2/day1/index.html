@@ -6,21 +6,36 @@
         <style>
             .box { /* . is targetting class= */
                 border: 1px solid green;
-                width: 200px;
+                /* width: 200px; */
                 height: 200px;
+                order: 1; /* default 0 */
+                flex: 1;
             }
 
             #myflexcontainer { /* # is targetting id= */
                 background-color: gold;
                 border: 2px dotted blue;
-                height: 1200px;
+                height: 800px;
                 /* width: 500px; */
+                
                 display: flex;
                 flex-direction: row; /* row (default); row-reverse; column; column-reverse  */
-                justify-content: center; /* works on main axis */
+                justify-content: space-between; /* works on main axis */
                 align-items: flex-start; /* works on cross axis */
                 /* flex-wrap: wrap;
                 align-content: space-around; */
+            }
+
+            #box3{
+                /* align-self: flex-end;  */
+                /* overriding the align-items on parent container */
+                order: 0;
+                flex: 2;
+                /* flex: 2; */
+            }
+
+            #box2 {
+                flex: 3;
             }
         </style>
 
