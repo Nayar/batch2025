@@ -6,10 +6,16 @@
             #mygridcontainer {
                 background-color: aqua;
                 display: grid;
-                grid-template-columns: 200px repeat(2, 2fr) 3fr;; /* how many columns: 4 */
-                grid-template-rows: repeat(5, 1fr); /* how many rows */
+                grid-template-columns: 200px repeat(3, 2fr) ;; /* how many columns: 4 */
+                grid-template-rows: repeat(5, 1fr); /* how many rows: 5 */
                 column-gap: 10px; /* how much gap between columns */
                 row-gap: 20px; /* how much gap between rows */
+                grid-template-areas: 
+                    "sidebar nav nav nav"
+                    "sidebar content content ads"
+                    "sidebar content content ads"
+                    "sidebar content content ads"
+                    "sidebar footer footer footer";
             }
 
             .box {
@@ -17,27 +23,18 @@
                 font-size: 60px;
                 border: 2px dotted red;
             }
-
-            #box3 {
-                grid-column: 2; /* manually assigns column */
-                grid-row: 3;    /* manually assigns rows */
-            }
-
-            #box4 {
-                grid-column: 3 / 5; /* start on column 3, go up to where column 5 starts */
-                grid-row: 2 / span 3;
-            }
         </style>
     </head>
     <body>
         <h1>Let's learn CSS grid</h1>
         <div id="mygridcontainer">
-            <div class="box">1</div>
-            <div class="box">2</div>
-            <div class="box" id="box3">3</div>
-            <div class="box" id="box4">4</div>
-            <div class="box">5</div>
-            <div class="box">6</div>
+            <div class="box" style="grid-area: nav">1</div>
+            <!-- <div class="box" style="grid-area: nav">1.5</div> -->
+            <div class="box" style="grid-area: content">2</div>
+            <div class="box" id="box3" style="grid-area: ads">3</div>
+            <div class="box" id="box4" style="grid-area: content">4</div>
+            <div class="box" style="grid-area: footer">5</div>
+            <div class="box" style="grid-area: sidebar">6</div>
         </div>
     </body>
 </html>
